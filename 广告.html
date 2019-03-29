@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+			*{
+				margin: 0;
+				padding: 0;
+			}
+			img{
+				position: absolute;
+				top: 50px;
+			}
+			#left{
+				left: 0;
+			}
+			#right{
+				right: 0;
+			}
+			p{
+				text-align: center;
+			}
+		</style>
+		<script>
+			window.onload=function(){
+				var imgs=document.getElementsByTagName("img");
+//				function fn(){
+//					for(var i=0;i<imgs.length;i++){
+//						imgs[i].style.display="none";
+//					}
+//				}
+//				setTimeout(fn,3*1000);
+				
+//				function hidden(obj1,obj2){
+//					obj1.style.display="none";
+//					obj2.style.display="none";
+//				}
+				function $(id){
+					return document.getElementById(id);
+				}
+//				function hidden(id1,id2){
+//					$(id1).style.display="none";
+//					$(id2).style.display="none";
+//				}
+				function hidden(){
+					var length=arguments.length;
+					for(var i=0;i<length;i++){
+						$(arguments[i]).style.display="none";
+					}
+				}
+				setTimeout(function(){
+					hidden("left","right");
+				},3*1000)
+			}
+		</script>
+	</head>
+	<body>
+		<img src="img/1.gif" id="left" />
+		<img src="img/2.gif" id="right" />
+		<p>假如我年少有为不自卑，懂得是珍贵</p>
+		<p>假如我年少有为不自卑，懂得是珍贵</p>
+		<p>假如我年少有为不自卑，懂得是珍贵</p>
+		<p>假如我年少有为不自卑，懂得是珍贵</p>
+		<p>假如我年少有为不自卑，懂得是珍贵</p>
+		<p>假如我年少有为不自卑，懂得是珍贵</p>
+		<p>假如我年少有为不自卑，懂得是珍贵</p>
+		<p>假如我年少有为不自卑，懂得是珍贵</p>
+		<p>假如我年少有为不自卑，懂得是珍贵</p>
+		<p>假如我年少有为不自卑，懂得是珍贵</p>
+		<p>假如我年少有为不自卑，懂得是珍贵</p>
+		<p>假如我年少有为不自卑，懂得是珍贵</p>
+		<p>假如我年少有为不自卑，懂得是珍贵</p>
+		<p>假如我年少有为不自卑，懂得是珍贵</p>
+		<p>假如我年少有为不自卑，懂得是珍贵</p>
+		<p>假如我年少有为不自卑，懂得是珍贵</p>
+		<p>假如我年少有为不自卑，懂得是珍贵</p>
+		<p>假如我年少有为不自卑，懂得是珍贵</p>
+		<p>假如我年少有为不自卑，懂得是珍贵</p>
+		<p>假如我年少有为不自卑，懂得是珍贵</p>
+		<p>假如我年少有为不自卑，懂得是珍贵</p>
+		<p>假如我年少有为不自卑，懂得是珍贵</p>
+		<p>假如我年少有为不自卑，懂得是珍贵</p>
+		<p>假如我年少有为不自卑，懂得是珍贵</p>
+		<p>假如我年少有为不自卑，懂得是珍贵</p>
+		<p>假如我年少有为不自卑，懂得是珍贵</p>
+		<p>假如我年少有为不自卑，懂得是珍贵</p>
+		<p>假如我年少有为不自卑，懂得是珍贵</p>
+		<p>假如我年少有为不自卑，懂得是珍贵</p>
+	</body>
+</html>

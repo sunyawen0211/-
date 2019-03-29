@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+			*{
+				margin: 0;
+				padding: 0;
+			}
+			.box{
+				width: 100px;
+				height: 100px;
+				background: red;
+				position: absolute;
+				top: 105px;
+				left: 0;
+			}
+		</style>
+	</head>
+	<body>
+		<button id="btn">点我运动</button>
+		<div class="box">
+			
+		</div>
+	</body>
+	<script>
+		var btn=document.getElementById("btn");
+		var box=document.getElementsByClassName("box")[0];
+		var leader=0;
+		var target=400;
+		btn.onclick=function(){
+			animate(box,600);
+		}
+		function animate(obj,target){
+			clearInterval(obj.timer);//// 先清除定时器
+            var speed=obj.offsetLeft<target ? 15:-15;
+            obj.timer=setInterval(function(){
+            	var result=target-obj.offsetLeft;
+            	obj.style.left=obj.offsetLeft+speed+"px";
+            	if(Math.abs(result)<=15){
+            		clearInterval(obj.timer);
+            		obj.style.left=target+"px";
+            	}
+            },10)
+		}
+	</script>
+</html>

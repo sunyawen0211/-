@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+			*{
+				margin: 0;
+				padding: 0;
+			}
+			img{
+				vertical-align: top;				
+			}
+			div{
+				width: 100%;
+				margin: 0 auto;
+				text-align: center;
+			}
+			#main{
+				margin-top: 10px;
+			}
+			.fixed{
+				position: fixed;
+				top: 0;
+				left: 0;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="top">
+			<img src="img/top.png">
+		</div>
+		<div class="nav" id="nav">
+			<img src="img/nav.png">
+		</div>
+	    <div id="main">
+	    	<img src="img/main.png">
+	    </div>
+	</body>
+	<script>
+		var nav=document.getElementsByClassName("nav")[0];
+		//top不能使我们的变量名    是js里面的对象
+		console.log("nav="+nav);
+		var a=nav.offsetTop;
+		console.log(a);
+		//滚动事件
+		//滚动1px 业务逻辑代码就执行一次
+		window.onscroll=function(){
+			//获得页面滚动的高度
+			var scrollTop = window.pageYOffset || document.documentElement.scrollTop
+        	|| document.body.scrollTop || 0;
+        	var scrollHeight=scrollTop;
+        	console.log("scrollHeight="+scrollHeight);
+        	if(scrollHeight>=a){
+        		nav.className="fixed"
+        	}else{
+        		nav.className="";
+        	}
+
+		}
+	</script>
+</html>
